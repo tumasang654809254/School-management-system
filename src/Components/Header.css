@@ -1,0 +1,425 @@
+.headercontainer{
+    height: auto;
+    flex: 1;
+}
+
+
+.headerinner{
+    height: 5rem;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-y: none;
+    -webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, -50px -50px 0px -30px rgba(0,0,0,0); 
+    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, -50px -50px 0px -30px rgba(0,0,0,0);
+    background: #1C6EA4;
+}
+
+
+
+.headermiddle{
+    height: inherit;
+    display: flex;
+    flex: 0.7;
+    align-items: center;
+}
+
+/* Large devices (laptops/desktops, 579px and up) */
+@media only screen and (max-width: 576px) {
+    .headermiddle {
+        display: none;
+    }
+  }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 577px) and (max-height: 992px) {
+    .headermiddle{
+        display: none;
+    }
+  } 
+
+  @media only screen and (min-width: 993px) and (max-height: 1199px) {
+    .headermiddle{
+        display: flex;
+        width: 300px;
+    }
+  } 
+
+  @media only screen and (min-width: 1200px) {
+    .inputbox input{
+        flex: 0.9;
+    }
+  } 
+
+
+
+.inputbox{
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     margin-left: 45px;
+}
+
+.inputbox input{
+    width: 300px;
+    height: 3rem;
+    outline: none;
+    color: rgb(7, 0, 0);
+    background-color:transparent;
+    padding-left: 20px;
+    margin-left: 10px;
+    border: none;
+}
+
+@media only screen and (min-width: 993px) and (max-height: 1199px) {
+    .inputbox input{
+        display: flex;
+        width: 300px;
+    }
+  } 
+
+  @media only screen and (min-width: 1200px) {
+    .inputbox input{
+        display: flex;
+        width: 500px;
+    }
+  } 
+
+
+
+.headerright{
+    flex: 0.7;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position:static;
+}
+
+/* Large devices (laptops/desktops, 576px and up) */
+@media only screen and (max-width: 576px) {
+    .headerright {
+        display: none;
+    }
+  }
+
+  @media only screen and (min-width: 993px) and (max-height: 1199px) {
+    .headerright{
+        display: flex;
+        width: 300px;
+    }
+  } 
+
+/*HIDDEN MENU */
+  .mt2_hidden{
+    display: none;
+    position: absolute;
+}
+
+.mt2_hidden .mt2_hidden_inner{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mt2_hidden_icon{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 576px) {
+    .mt2_hidden {
+        display: block;
+        margin-left: 150px;
+    }
+  }
+
+
+
+.usercontainer{
+    display:flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding-top: 15px;
+    padding-bottom: 1rem;
+}
+.user-container{
+    display:flex;
+    align-items: center;
+    justify-content:flex-start;
+    cursor: pointer;
+}
+
+.userhead{
+    display: flex;
+}
+.usercontainer .useradmin{
+    color: rgb(165, 156, 156);
+}
+.language .languageitems{
+    color: rgb(223, 207, 207);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.messageicon{
+    color: rgb(228, 217, 217);
+}
+.notification {
+    color: rgb(220, 210, 210);
+}
+.userhead h4{
+    color: rgb(220, 207, 207);
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.dropdownmenu{
+    position: absolute;
+    top: 100px;
+    right: 280px;
+    width: 240px;
+    height: fit-content;
+    background-color: rgb(112, 112, 228);
+    border-radius: 3px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+ 
+
+.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 0.3s ease-in;
+}
+.inactive{
+    opacity: 0;
+    visibility:hidden;
+    transform: translateY(-20px);
+    transition:0.3s ease-in;
+}
+
+
+
+.dropdownmenu::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+.dropdownmenu h4{
+    color: rgb(242, 240, 235);
+    font-size: 20px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width:inherit;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+}
+.dropdownmenu ul li{
+    border-top:1px solid rgb(10, 1, 23);
+    padding: 10px;
+}
+.dropdownmenu ul li:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.dropdownItem{
+    display: flex;
+    align-items: center;
+    color: #fbfafa;
+    padding: 10px 0 0 30px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.dropdownItem:hover{
+    background-color: rgb(26, 20, 91);
+    border-radius: 3px;
+}
+.dropdownItem h5{
+    padding-left: 25px;
+}
+
+/* STYLES FOR THE DROPDOWN MESSAGE BOX*/
+.dropdown-message-box{
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    width: 340px;
+    background-color: rgb(112, 112, 228);
+    border-radius: 3px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    height:400px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* hide scrollbar but allow scrolling */
+.dropdown-message-box {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+.dropdown-message-box::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+.dropdown-message-box::before{
+    content:'';
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(71, 18, 156);
+    transform: rotate(45deg);
+    -webkit-transform: matrix();
+}
+
+.mailoutlineIcon .m-t{
+    color: #ffff;
+    font-size: 15px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(15, 93, 125);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-message-box-item{
+    height:auto;
+    width: auto;
+}
+.dropdown-message-box h5{
+    color: rgb(242, 240, 235);
+    font-size: 15px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width:inherit;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+}
+.dropdown-messages{
+    margin-bottom: 5px;
+    height: 60px;
+    border-top: 1px solid rgb(1, 1, 16);
+}
+.dropdown-messages .message_box{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+.message_box .user_message{
+    padding-left: 20px;
+    line-height: 25px;
+}
+.user_message .user-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/*Styling the dropdown notification */
+.nt-1-box{
+    position: absolute;
+    top: 100px;
+    right: 140px;
+    width: 240px;
+    background-color: rgb(112, 112, 228);
+    border-radius: 3px;
+    height:fit-content;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.nt-1-box::before{
+    
+    content:'';
+    position: absolute;
+    top: -5px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(5, 2, 2);
+    transform: rotate(45deg);
+}
+
+.nt-1 .m-t1{
+    color: #ffff;
+    font-size: 15px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(15, 155, 243);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nt-1-box h5{
+    color: rgb(242, 240, 235);
+    font-size: 15px;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width:inherit;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+}
+.nt-1-box .nt-1-box-inner{
+    height:auto;
+    width: auto;
+}
+
+.nt-1-box-inner .notification-info{
+    display: flex;
+    align-items: center;
+    padding: 10px ;
+    line-height: 20px;
+    border-top: 1px solid rgb(1, 1, 16);
+}
+.notification-info div{
+    padding-left: 15px;
+    display: block;
+}
+.notification-info div time{
+    font-size: small;
+}

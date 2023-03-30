@@ -1,0 +1,62 @@
+.sidebar_container{
+    width: 300px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    transition: width 0.3s ease-out;
+}
+
+/* Large devices (laptops/desktops, 576px and up) */
+@media only screen and (max-width: 576px) {
+    .sidebar_container {
+        display: none;
+    }
+  }
+
+.side_bar_min {
+    width: 100px;
+}
+
+/*
+.icon{
+    margin-left: 40px;
+}
+.icon_text {
+    display: inline;
+}
+
+.display_none {
+    display: none;
+}
+*/
+.sidebar_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 5rem;
+    width: inherit;
+    background-color: rgb(12, 12, 67);
+    -webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, -50px -50px 0px -30px rgba(0,0,0,0); 
+    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, -50px -50px 0px -30px rgba(0,0,0,0);
+    background: #1C6EA4;
+}
+
+.sidebar_menu{
+    overflow-y: scroll;
+    height: 100vh;
+    background-color: rgb(9, 9, 44);
+    -webkit-box-shadow: inset -1px 3px 8px 5px #0f2947, 2px 5px 16px 0px #052a55, -50px -50px 0px -30px rgba(0,0,0,0); 
+    box-shadow: inset -1px 3px 8px 5px #05284f, 2px 5px 16px 0px #062141, -50px -50px 0px -30px rgba(0,0,0,0);
+    background: #042c47;
+}
+/* hide scrollbar but allow scrolling */
+.sidebar_menu {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+.sidebar_menu::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
